@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/thamarai-portfolio/static/css/main.d03c8bdf.css",
+    "main.js": "/thamarai-portfolio/static/js/main.3f6b8a3e.js",
+    "static/js/453.5c9df882.chunk.js": "/thamarai-portfolio/static/js/453.5c9df882.chunk.js",
+    "static/media/bg.jpg.jpg": "/thamarai-portfolio/static/media/bg.jpg.8a172139e59590dd552d.jpg",
+    "index.html": "/thamarai-portfolio/index.html",
+    "main.d03c8bdf.css.map": "/thamarai-portfolio/static/css/main.d03c8bdf.css.map",
+    "main.3f6b8a3e.js.map": "/thamarai-portfolio/static/js/main.3f6b8a3e.js.map",
+    "453.5c9df882.chunk.js.map": "/thamarai-portfolio/static/js/453.5c9df882.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d03c8bdf.css",
+    "static/js/main.3f6b8a3e.js"
+  ]
+}
