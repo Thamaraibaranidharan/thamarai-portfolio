@@ -4,7 +4,6 @@ body {
   background: #f4f4f9;
 }
 
-/* Navbar */
 .navbar {
   background: #2c3e50;
   padding: 15px;
@@ -15,8 +14,6 @@ body {
 
 .navbar .logo {
   color: #fff;
-  font-size: 20px;
-  font-weight: bold;
 }
 
 .nav-links {
@@ -30,66 +27,21 @@ body {
   text-decoration: none;
 }
 
-.nav-links li a.active {
-  border-bottom: 2px solid #f1c40f;
-}
-
-/* Page Sections */
 .page {
   padding: 60px;
   text-align: center;
-  background: #ffffff; /* White card-like look */
-  margin: 20px auto;
-  width: 80%;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
 }
 
-/* About Page */
-.about-title {
-  font-size: 32px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 15px;
-  border-bottom: 3px solid #3498db;
+.highlight {
+  color: #3498db;
+}
+
+.btn {
   display: inline-block;
-  padding-bottom: 5px;
-}
-
-.about-text {
-  font-size: 18px;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Skills Page */
-.skills-title {
-  font-size: 32px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #3498db;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.skill-item {
   background: #3498db;
   color: #fff;
   padding: 10px 20px;
   border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.skill-item:hover {
-  background: #2980b9;
+  margin-top: 20px;
+  text-decoration: none;
 }
