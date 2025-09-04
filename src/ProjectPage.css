@@ -1,0 +1,78 @@
+.projects-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  font-family: "Segoe UI", sans-serif;
+  color: #1e293b;
+}
+
+.projects-section h2 {
+  font-size: 3rem;              /* Bigger main heading */
+  margin-bottom: 2.8rem;
+  color: #0f172a;
+  border-bottom: 3px solid #3b82f6;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  font-weight: 800;             /* Extra bold */
+}
+
+/* Card Style */
+.project-card {
+  background: #ffffff;
+  border-radius: 1.2rem;
+  margin-bottom: 3rem;
+  padding: 2.5rem 3rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+.project-content h3 {
+  font-size: 2rem;              /* Larger project title */
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #1e293b;
+}
+
+/* Text Blocks */
+.project-content p {
+  font-size: 1.2rem;            /* Bigger paragraph font */
+  line-height: 1.9;
+  color: #334155;
+  margin-bottom: 1.2rem;
+  text-align: justify;
+  font-weight: 500;             /* Slightly bold */
+}
+
+/* Highlight keywords */
+.project-content p strong {
+  color: #0f172a;
+  font-weight: 700;             /* Bolder */
+}
+
+/* GitHub Button */
+.project-content a {
+  display: inline-block;
+  margin-top: 1.2rem;
+  text-decoration: none;
+  background: #2563eb;
+  color: #fff;
+  padding: 0.8rem 1.6rem;       /* Bigger button */
+  border-radius: 0.6rem;
+  font-weight: 700;             /* Bold text */
+  font-size: 1.1rem;            /* Larger text */
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.project-content a:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.4);
+}
+

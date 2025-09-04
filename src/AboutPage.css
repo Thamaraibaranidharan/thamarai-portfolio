@@ -1,0 +1,144 @@
+/* AboutPage.css */
+
+.about-page {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9fafb;
+  padding: 4rem 2rem;
+  color: #1e293b;
+}
+
+/* Container */
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 3rem 4rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 1s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Page Title */
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #0f172a;
+  letter-spacing: 1px;
+  border-bottom: 4px solid #2563eb; /* Blue underline */
+  display: inline-block;
+  padding-bottom: 0.6rem;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Section Layout */
+.section {
+  margin-bottom: 3rem;
+  opacity: 0;
+}
+
+.section:nth-child(odd) {
+  animation: slideInLeft 1s forwards;
+}
+.section:nth-child(even) {
+  animation: slideInRight 1s forwards;
+}
+
+.section:nth-child(1) { animation-delay: 0.3s; }
+.section:nth-child(2) { animation-delay: 0.6s; }
+.section:nth-child(3) { animation-delay: 0.9s; }
+.section:nth-child(4) { animation-delay: 1.2s; }
+
+/* Section Titles */
+.section-title,
+.about-section h2 {
+  font-family: "Poppins", sans-serif; /* Same as Projects page */
+  font-size: 1.8rem; /* Matches Projects headings */
+  font-weight: 600;
+  color: #000; /* Black */
+  margin-bottom: 1.2rem;
+  border-bottom: 2px solid #007BFF; /* Blue underline */
+  display: inline-block;
+  padding-bottom: 5px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.section-title:hover,
+.about-section h2:hover {
+  transform: translateX(4px);
+  color: #111827;
+}
+
+/* Paragraphs */
+.description,
+.section-content {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  text-align: justify;
+  font-weight: 400;
+  color: #334155;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.description:hover,
+.section-content:hover {
+  transform: scale(1.01);
+}
+
+/* Lists */
+.achievement-list,
+.skill-list {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.achievement-list li,
+.skill-list li {
+  margin-bottom: 0.8rem;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  font-weight: 500;
+  color: #1e293b;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.achievement-list li:hover,
+.skill-list li:hover {
+  transform: translateX(6px);
+  color: #2563eb;
+}
+
+.achievement-list li::before,
+.skill-list li::before {
+  content: "•";
+  color: #2563eb;
+  font-weight: bold;
+  display: inline-block;
+  width: 1.2rem;
+  margin-left: -1.2rem;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -1,0 +1,127 @@
+/* Homepage Base */
+.homepage {
+  padding: 70px 12%;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  color: #fff;
+
+  /* Gradient + background image */
+  background-image: 
+    linear-gradient(135deg, #d0e8fd, #cddeee, #dde8ec, #c3ebe6),
+    url('../public/bg.jpg.jpg'); /* ✅ Corrected path */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* Animated Gradient Background */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Section Styling */
+.homepage section {
+  margin-bottom: 80px;
+  padding: 50px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLeft 1.2s ease forwards;
+}
+
+/* Alternate animation for every second section */
+.homepage section:nth-child(even) {
+  transform: translateX(100px);
+  animation: slideInRight 1.2s ease forwards;
+}
+
+/* Slide-in Animations */
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Floating Effect */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Titles */
+.website-info h1, 
+.about-me h2 {
+  font-size: 42px;
+  font-weight: 800; /* Bolder */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #000000;
+  text-shadow: 0 0 18px rgba(119, 117, 121, 0.95);
+  animation: float 4s ease-in-out infinite;
+  letter-spacing: 1.5px; /* More spacing for bold look */
+}
+
+/* Paragraphs */
+.website-info p,
+.about-me p {
+  font-size: 20px;
+  font-weight: 600; /* Make text thicker */
+  color: #000000;
+  margin-bottom: 18px;
+  line-height: 2; /* Better readability */
+}
+
+/* Highlighted Text */
+.highlight {
+  color: #eacbf6; /* Deep purple */
+  font-weight: 700; /* Extra bold highlight */
+}
+
+.role {
+  color: #13104e;
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* Hover Lift */
+section:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 35px rgba(236, 199, 250, 0.7);
+  transition: 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .homepage {
+    padding: 40px 8%;
+  }
+
+  .website-info h1,
+  .about-me h2 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .website-info p,
+  .about-me p {
+    font-size: 17px;
+    font-weight: 500;
+  }
+}
