@@ -22,31 +22,30 @@ function ContactPage() {
     }));
   };
 
-  // 📧 Handle form submit (calls Spring Boot backend)
-  const handleSubmit = async (e) => {
+  // ✅ FIXED: Send message to WhatsApp
+  const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
     setStatus("");
 
-    try {
-      const response = await fetch("http://localhost:8080/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+    const whatsappMessage = `
+Hello Thamarai 👋
 
-      if (response.ok) {
-        setStatus("✅ Message sent! You’ll also get a confirmation email.");
-        setFormData({ name: "", email: "", message: "", rating: 0 });
-      } else {
-        setStatus("❌ Failed to send message. Try again later.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      setStatus("❌ Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-    }
+Name: ${formData.name}
+Email: ${formData.email}
+Rating: ${formData.rating} ⭐
+Message: ${formData.message}
+    `;
+
+    const whatsappURL = `https://wa.me/917010467469?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+
+    window.open(whatsappURL, "_blank");
+
+    setStatus("✅ Thank you for your feedback!");
+    setFormData({ name: "", email: "", message: "", rating: 0 });
+    setLoading(false);
   };
 
   return (
@@ -59,8 +58,19 @@ function ContactPage() {
             I’d love to connect with you! Whether it's about collaborations,
             project discussions, or just feedback, feel free to reach out.
           </p>
+
           <p>📧 mbthamarai2904@gmail.com</p>
           <p>📞 +91 7010467469</p>
+
+          <a
+            href="https://wa.me/917010467469?text=Hi%20Thamarai,%20I%20visited%20your%20portfolio!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="whatsapp-link"
+          >
+            💬 Message me on WhatsApp
+          </a>
+
           <p>📍 Coimbatore, India</p>
 
           {/* Socials */}
